@@ -1,0 +1,17 @@
+# Compiled binaries
+pke_server
+lodi_server
+lodi_client
+tfa_server
+tfa_client
+test_sender
+
+# Object and build files
+*.o
+*.out
+build/
+
+# OS/editor files
+.DS_Store
+.vscode/
+.idea/
