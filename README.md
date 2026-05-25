@@ -2,7 +2,7 @@
 
 ## Overview
 
-This project is a C-based networking assignment that simulates a multi-server authentication system over UDP sockets. It includes a public-key exchange server, a login server, a two-factor authentication server, and client programs that communicate through structured C messages.
+This project is a C-based networking project that simulates a multi-server authentication system over UDP sockets. It includes a public-key exchange server, a login server, a two-factor authentication server, and client programs that communicate through structured C messages.
 
 The project demonstrates low-level network programming, client-server communication, message serialization through structs, and a simplified authentication workflow.
 
@@ -18,15 +18,15 @@ The project demonstrates low-level network programming, client-server communicat
 
 ## Project Components
 
-| File | Purpose |
-|---|---|
-| `common.h` | Shared constants, ports, enums, and message structs |
-| `pke_server.c` | Public Key Exchange server for registering and retrieving user public keys |
-| `lodi_client.c` | Demo client that registers a key, requests a key, and attempts login |
-| `lodi_server.c` | Login server that verifies client login messages using the PKE server |
-| `tfa_client.c` | Client that registers for two-factor authentication |
-| `tfa_server.c` | TFA server that verifies registration and stores client address data |
-| `test_sender.c` | Small UDP test sender used for basic server testing |
+| File            | Purpose                                                                    |
+| --------------- | -------------------------------------------------------------------------- |
+| `common.h`      | Shared constants, ports, enums, and message structs                        |
+| `pke_server.c`  | Public Key Exchange server for registering and retrieving user public keys |
+| `lodi_client.c` | Demo client that registers a key, requests a key, and attempts login       |
+| `lodi_server.c` | Login server that verifies client login messages using the PKE server      |
+| `tfa_client.c`  | Client that registers for two-factor authentication                        |
+| `tfa_server.c`  | TFA server that verifies registration and stores client address data       |
+| `test_sender.c` | Small UDP test sender used for basic server testing                        |
 
 ## Authentication Model
 
@@ -110,6 +110,20 @@ Terminal 3:
 ```
 
 The `lodi_client` registers the demo user's key with the PKE server. Then `tfa_client` sends a TFA registration request, which the TFA server verifies through the PKE server.
+
+
+## Demo Screenshots
+
+### Public Key Exchange Server
+![PKE Server](screenshots/pke-server.png)
+
+### Login Flow
+![Login Flow](screenshots/login-flow.png)
+
+### Two-Factor Authentication Flow
+![TFA Flow](screenshots/tfa-flow.png)
+
+
 
 ## Skills Demonstrated
 
